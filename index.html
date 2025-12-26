@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bautomatex - Platform Prototype</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#607AFB",
+                        "primary-hover": "#4b64e6",
+                        "primary-dark": "#3a51d4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0f1323",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1a1f33",
+                        "text-primary-light": "#111813",
+                        "text-primary-dark": "#f0f4f2",
+                        "text-secondary-light": "#61896f",
+                        "text-secondary-dark": "#8baaa0",
+                        "text-main": "#111813",
+                        "text-muted": "#61896f",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#181d2e",
+                        "surface-highlight": "#f0f4f2",
+                        "surface-highlight-dark": "#232940",
+                        danger: "#ef4444",
+                        warning: "#f59e0b",
+                        info: "#3b82f6"
+                    },
+                    fontFamily: {
+                        display: "Inter",
+                        body: ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px"
+                    },
+                    boxShadow: {
+                        node: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                        "node-hover": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                        floating: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                        error: "0 0 0 2px #ef4444, 0 10px 15px -3px rgba(239, 68, 68, 0.2)",
+                        warning: "0 0 0 2px #f59e0b, 0 10px 15px -3px rgba(245, 158, 11, 0.2)"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body, html { height: 100%; margin: 0; padding: 0; }
+        #root { height: 100%; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 20px; }
+        .bg-grid-pattern {
+            background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+        @keyframes dash { to { stroke-dashoffset: -20; } }
+        .flow-line-active { stroke-dasharray: 5; animation: dash 1s linear infinite; }
+        .flow-line-error { stroke: #ef4444; stroke-dasharray: 5; }
+        .score-circle { background: conic-gradient(#f59e0b 0% 65%, #e2e8f0 65% 100%); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .icon-filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark transition-colors duration-200">
+    <div id="root"></div>
+</body>
+</html>

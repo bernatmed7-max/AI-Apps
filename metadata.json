@@ -1,0 +1,9 @@
+{
+  "name": "Bautomatex",
+  "description": "An AI-powered automation platform prototype featuring Gemini 3 Pro, Veo Video Generation, Live API voice interactions, and advanced multimodal capabilities.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera",
+    "geolocation"
+  ]
+}
